@@ -17,15 +17,6 @@ let args = nums.map((num) => parseFloat(num))
                .filter((num) => !isNaN(num));
 
 
-//  Check if args.length is 0, happens if no numbers are entered
-
+//  Check if args.length is 0 after map and filter, if it is, log a string, if not, sum the array using reduce
 args = args.length === 0 ? `Please enter numbers` : args.reduce((sum, num) => sum += num)
 console.log(args);
-// if (args.length === 0) {
-//   console.log(`Please enter numbers`);
-//   process.exit();
-// } else {
-//     args = args.reduce((sum, num) => sum += num)
-//     //  Log sum to console
-//     console.log(args);
-//   }
