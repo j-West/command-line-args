@@ -19,11 +19,13 @@ let args = nums.map((num) => parseFloat(num))
 
 //  Check if args.length is 0, happens if no numbers are entered
 
-if (args.length === 0) {
-  console.log(`Please enter numbers`);
-  process.exit();
-} else {
-    args = args.reduce((sum, num) => sum += num)
-    //  Log sum to console
-    console.log(args);
-  }
+args = args.length === 0 ? `Please enter numbers` : args.reduce((sum, num) => sum += num)
+console.log(args);
+// if (args.length === 0) {
+//   console.log(`Please enter numbers`);
+//   process.exit();
+// } else {
+//     args = args.reduce((sum, num) => sum += num)
+//     //  Log sum to console
+//     console.log(args);
+//   }
